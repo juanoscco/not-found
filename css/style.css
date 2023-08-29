@@ -1,0 +1,210 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  src: url("../assets/fonts/Inconsolata/Inconsolata_Expanded-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Space Mono bold";
+  src: url("../assets/fonts/Space_Mono/SpaceMono-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Space Mono regular";
+  src: url("../assets/fonts/Space_Mono/SpaceMono-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+body {
+  max-width: 1200px;
+  width: 90%;
+  margin: 1rem auto;
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+
+img {
+  width: 33.7015rem;
+  height: 27.96413rem;
+}
+
+h2 {
+  color: #333;
+  font-family: "Inconsolata", sans-serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.12rem;
+  text-transform: uppercase;
+}
+
+h1 {
+  color: #333;
+  font-family: "Space Mono bold", sans-serif;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.14rem;
+  width: 100%;
+}
+
+p {
+  color: #4f4f4f;
+  font-family: "Space Mono regular", sans-serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.0525rem;
+  width: 75%;
+}
+
+button {
+  width: 13.5rem;
+  height: 4.25rem;
+  background: #333;
+  color: #fff;
+  font-family: "Space Mono bold", sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: -0.03063rem;
+}
+
+footer {
+  text-align: center;
+  color: #bdbdbd;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+footer a {
+  color: #bdbdbd;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.wrapper {
+  display: flex;
+  gap: 3rem;
+}
+.wrapper article {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+  img {
+    width: 26.7015rem;
+    height: 24.96413rem;
+  }
+  h1 {
+    font-size: 3.4rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  img {
+    width: 20.7015rem;
+    height: 18.96413rem;
+  }
+  h1 {
+    font-size: 2.7rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  button {
+    width: 10.5rem;
+    height: 3.1rem;
+    font-size: 0.75rem;
+  }
+}
+@media screen and (max-width: 765px) {
+  img {
+    width: 16.7015rem;
+    height: 14.96413rem;
+  }
+  h1 {
+    font-size: 1.9rem;
+  }
+  p {
+    font-size: 0.75rem;
+  }
+  button {
+    width: 8.5rem;
+    height: 3rem;
+    font-size: 0.65rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    min-height: 100vh;
+  }
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .wrapper article {
+    align-items: center;
+    gap: 1.75rem;
+  }
+  img {
+    width: 17.92688rem;
+    height: 14.875rem;
+  }
+  h1 {
+    text-align: center;
+  }
+  footer {
+    font-size: 0.79rem;
+  }
+  footer a {
+    font-size: 0.79rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  body {
+    max-width: 1000px;
+  }
+  .wrapper article {
+    width: 90%;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  h1 {
+    text-align: start;
+    font-size: 1.2rem;
+    width: 80%;
+  }
+  p {
+    font-size: 1rem;
+    width: 100%;
+  }
+  button {
+    height: 2.2rem;
+  }
+}/*# sourceMappingURL=style.css.map */

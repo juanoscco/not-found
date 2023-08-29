@@ -1,0 +1,212 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  src: url("../assets/fonts/Inconsolata/Inconsolata_Expanded-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Space Mono bold";
+  src: url("../assets/fonts/Space_Mono/SpaceMono-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Space Mono regular";
+  src: url("../assets/fonts/Space_Mono/SpaceMono-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+
+// Variables
+@mixin standard_font($font, $font_weight, $color, $font_family) {
+  color: $color;
+  font-family: $font_family, sans-serif;
+  font-size: $font;
+  font-style: normal;
+  font-weight: $font_weight;
+  line-height: normal;
+}
+
+body {
+  max-width: 1200px;
+  width: 90%;
+  margin: 1rem auto;
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+
+img {
+  width: 33.7015rem;
+  height: 27.96413rem;
+}
+
+h2 {
+  @include standard_font(1.5rem, 700, #333, "Inconsolata");
+  letter-spacing: -0.12rem;
+  text-transform: uppercase;
+}
+
+h1 {
+  @include standard_font(4rem, 700, #333, "Space Mono bold");
+  letter-spacing: -0.14rem;
+  width: 100%;
+}
+
+p {
+  @include standard_font(1.5rem, 400, #4f4f4f, "Space Mono regular");
+  letter-spacing: -0.0525rem;
+  width: 75%;
+}
+
+button {
+  width: 13.5rem;
+  height: 4.25rem;
+  background: #333;
+  @include standard_font(0.875rem, 700, #fff, "Space Mono bold");
+  text-transform: uppercase;
+  letter-spacing: -0.03063rem;
+}
+
+footer {
+  text-align: center;
+  @include standard_font(0.875rem, 500, #bdbdbd, "Montserrat");
+  a {
+    @include standard_font(0.875rem, 700, #bdbdbd, "Montserrat");
+  }
+}
+
+.wrapper {
+  display: flex;
+  //   flex-wrap: wrap;
+  gap: 3rem;
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  img {
+    width: 26.7015rem;
+    height: 24.96413rem;
+  }
+  h1 {
+    font-size: 3.4rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  img {
+    width: 20.7015rem;
+    height: 18.96413rem;
+  }
+  h1 {
+    font-size: 2.7rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  button {
+    width: 10.5rem;
+    height: 3.1rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  img {
+    width: 16.7015rem;
+    height: 14.96413rem;
+  }
+  h1 {
+    font-size: 1.9rem;
+  }
+  p {
+    font-size: 0.75rem;
+  }
+  button {
+    width: 8.5rem;
+    height: 3rem;
+    font-size: 0.65rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+    body{
+        min-height: 100vh;
+    }
+
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+
+    article {
+      align-items: center;
+      gap: 1.75rem;
+    //   margin-bottom: 3rem;
+    }
+  }
+  img {
+    width: 17.92688rem;
+    height: 14.875rem;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  //   p {
+  //     text-align: center;
+  //   }
+
+  footer{
+    font-size: 0.79rem;
+    a{
+        font-size: 0.79rem;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+    body{
+        max-width: 1000px;
+    }
+
+  .wrapper {
+    article {
+      width: 90%;
+      align-items: flex-start;
+      gap: .5rem;
+    }
+  }
+  h1 {
+    text-align: start;
+    font-size: 1.2rem;
+    width: 80%;
+  }
+  p {
+    font-size: 1rem;
+    width: 100%;
+  }
+  button{
+    height: 2.2rem;
+  }
+}
